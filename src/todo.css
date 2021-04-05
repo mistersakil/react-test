@@ -1,0 +1,80 @@
+.todoApp hr {
+    border: none;
+    border-top: 5px solid coral;
+    margin-bottom: 10px;
+}
+
+.todoApp form {
+    position: relative;
+    overflow: hidden;
+}
+
+.todoApp .errorMessage {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 10px;
+    color: #ef6f6f;
+}
+
+.todoApp input {
+    border: 1px solid coral;
+    width: 80%;
+    float: left;
+    color: green;
+    border-radius: none;
+    transition: all linear .3s;
+
+}
+
+
+.todoApp input:focus {
+    border: 1px solid darkgreen;
+    outline: none;
+}
+
+.todoApp input[type="submit"] {
+    width: 17%;
+    float: right;
+    text-align: center;
+    padding: 10px 0;
+    color: green;
+    
+}
+
+.todoApp input[type="submit"]:hover {
+	border-color: green;
+    color: #fff;
+    background: green;
+
+}
+
+.todoApp ul li {
+    border: 1px solid red;
+    margin-bottom: 5px;
+    line-height: 30px;
+    text-indent: 10px;
+}
+
+.todoApp .item {
+    text-decoration: line-through;
+}
+
+.todoApp .actions {
+    float: right;
+}
+
+.todoApp .actions .done,
+.todoApp .actions .delete {
+    background: #035206;
+    color: #ffffff;
+    padding: 0 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+.todoApp .actions .delete {
+    background: red;
+}
