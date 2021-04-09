@@ -39,11 +39,11 @@
     text-align: center;
     padding: 10px 0;
     color: green;
-    
+
 }
 
 .todoApp input[type="submit"]:hover {
-	border-color: green;
+    border-color: green;
     color: #fff;
     background: green;
 
@@ -64,15 +64,17 @@
     float: right;
 }
 
-.todoApp .actions .done,
+.todoApp .actions .success,
 .todoApp .actions .delete {
     background: #035206;
-    color: #ffffff;
-    padding: 0 15px;
-    margin: 0 5px;
-    font-size: 16px;
+    color: #faf6f6;
+    padding: 0 10px;
+    margin: 3px 5px;
     cursor: pointer;
-
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    border: none;
 }
 
 .todoApp .actions .delete {
