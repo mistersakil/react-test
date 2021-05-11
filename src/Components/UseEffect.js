@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import { SiHellofresh } from "react-icons/si";
-import { MdAddCircle } from "react-icons/md";
-import { IoIosRemove } from "react-icons/io";
 import { ImWarning } from "react-icons/im";
+import Buttons from "./Buttons";
+
+const counterContext = createContext();
 
 const UseEffect = () => {
   const [counter, counterSet] = useState(0);
@@ -30,27 +31,23 @@ const UseEffect = () => {
     }
   }, [counter]);
   return (
-    <>
+    <counterContext.Provider value={{ counterDownHandler, counterUpHandler }}>
       <h1>
         <SiHellofresh />
         Hello Reducer
         <hr />
       </h1>
       <h2>Count - {counter}</h2>
-      <button type="button" onClick={counterUpHandler}>
-        <MdAddCircle className="icon_custom_style" />
-      </button>
-      <button type="button" onClick={counterDownHandler}>
-        <IoIosRemove className="icon_custom_style" />
-      </button>
+      <Buttons />
       {counterWarning && (
         <p>
           Negative value not allowed
           <ImWarning style={{ color: "red", marginLeft: "5px" }} />
         </p>
       )}
-    </>
+    </counterContext.Provider>
   );
 };
 
 export default UseEffect;
+export { counterContext };
