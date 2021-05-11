@@ -10,11 +10,13 @@ import "./index.css";
 // import Todo from  './Todo'
 // import Context from "./Context";
 // import Keep from "./Keep";
-import Menu from "./Menu";
+// import Menu from "./Menu";
+// import Login from "./Login";
+import UseEffect from "./Components/UseEffect";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Menu />
+    <UseEffect />
   </BrowserRouter>,
   document.getElementById("root")
 );

@@ -1,0 +1,25 @@
+body {
+  background-color: rgb(56, 93, 214);
+}
+h1 {
+  color: orange;
+}
+form {
+  background-color: cornflowerblue;
+  padding: 55px 10px;
+  color: #fff;
+}
+.userList {
+  margin: 10px auto;
+  overflow: auto;
+  background-color: rgb(0, 14, 139);
+  padding: 15px;
+  color: #fff;
+  font-size: 20px;
+}
+.userList span {
+  float: left;
+}
+.userList span:last-child {
+  float: right;
+}
