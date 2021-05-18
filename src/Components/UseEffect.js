@@ -34,7 +34,7 @@ const UseEffect = () => {
     <counterContext.Provider value={{ counterDownHandler, counterUpHandler }}>
       <h1>
         <SiHellofresh />
-        Hello Reducer
+        Hello useEffect
         <hr />
       </h1>
       <h2>Count - {counter}</h2>

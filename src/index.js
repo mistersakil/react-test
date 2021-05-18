@@ -12,11 +12,12 @@ import "./index.css";
 // import Keep from "./Keep";
 // import Menu from "./Menu";
 // import Login from "./Login";
-import UseEffect from "./Components/UseEffect";
+// import UseEffect from "./Components/UseEffect";
+import Reducer from "./Components/Reducer";
 
 ReactDOM.render(
   <BrowserRouter>
-    <UseEffect />
+    <Reducer />
   </BrowserRouter>,
   document.getElementById("root")
 );
