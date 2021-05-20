@@ -20,7 +20,6 @@ const Reducer = () => {
         }, 3000);
       }
     }
-    console.log(count);
   }, [count]);
   return (
     <>

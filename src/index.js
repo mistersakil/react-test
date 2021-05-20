@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
+// import "./index.css";
 // import Counter from './Counter';
 // import Timer from  './Timer'
 // import DigitalCalculator from  './DigitalCalculator'
@@ -13,11 +13,12 @@ import "./index.css";
 // import Menu from "./Menu";
 // import Login from "./Login";
 // import UseEffect from "./Components/UseEffect";
-import Reducer from "./Components/Reducer";
+// import Reducer from "./Components/Reducer";
+import QuizApp from "./Components/QuizApp";
 
 ReactDOM.render(
   <BrowserRouter>
-    <Reducer />
+    <QuizApp />
   </BrowserRouter>,
   document.getElementById("root")
 );
