@@ -10,6 +10,7 @@ const QuizApp = () => {
   const [loading, loadingSet] = useState(true);
   const [count, countSet] = useState(0);
   const [score, scoreSet] = useState(0);
+  const [currentAnswer, currentAnswerSet] = useState("");
 
   useEffect(() => {
     const fetchApiCall = async () => {
@@ -25,7 +26,7 @@ const QuizApp = () => {
     if (questions.length === 0) {
       fetchApiCall();
     }
-  }, [questions, count]);
+  }, []);
 
   let answers;
   if (questions.length > 0 && count < questions.length) {
@@ -39,16 +40,23 @@ const QuizApp = () => {
           answer={answer}
           key={index}
           index={index}
-          onAnswerCheck={answerCheckHandler}
+          onAnswerCheck={currentAnswerSetHandler}
         />
       ));
   }
   function answerCheckHandler(answer) {
     if (answer === questions[count].correct_answer) {
-      console.log(he.decode(answer));
+      scoreSet(score + 10);
     }
+    console.log(he.decode(answer));
   }
-
+  function currentAnswerSetHandler(answer) {
+    currentAnswerSet(answer);
+  }
+  const nextQuestionHandler = () => {
+    console.log(currentAnswer);
+    countSet(count + 1);
+  };
   return (
     <div className="container">
       <h1 className="text-center">
@@ -63,12 +71,13 @@ const QuizApp = () => {
           <>
             <Question question={questions[count].question} />
             {answers && <div className="col text-center">{answers}</div>}
-            <button>Next</button>
+            <button onClick={nextQuestionHandler}>Next</button>
           </>
         )}
-        {count === questions.length - 1 && (
+        {/* {count === questions.length - 1 && (
           <p>{`Score is ${score} out of 100`}</p>
-        )}
+        )} */}
+        {score && <p>{`Score is ${score} out of 100`}</p>}
       </div>
     </div>
   );

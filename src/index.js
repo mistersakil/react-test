@@ -14,11 +14,12 @@ import { BrowserRouter } from "react-router-dom";
 // import Login from "./Login";
 // import UseEffect from "./Components/UseEffect";
 // import Reducer from "./Components/Reducer";
-import QuizApp from "./Components/QuizApp";
+// import QuizApp from "./Components/QuizApp";
+import QuizIndex from "./Components/Quiz/QuizIndex";
 
 ReactDOM.render(
   <BrowserRouter>
-    <QuizApp />
+    <QuizIndex />
   </BrowserRouter>,
   document.getElementById("root")
 );
