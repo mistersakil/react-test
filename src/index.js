@@ -18,13 +18,15 @@ import "./index.css";
 // import QuizIndex from "./Components/Quiz/QuizIndex";
 // import CounterClick from "./Components/Hoc/CounterClick";
 // import CounterHover from "./Components/Hoc/CounterHover";
-import ReduxComponent from "./Components/redux/ReduxComponent";
+import CounterClick from "./Components/redux/CounterClick";
+import CounterHover from "./Components/redux/CounterHover";
 import { Provider } from "react-redux";
 import reduxStore from "./redux/reduxStore";
 ReactDOM.render(
   <BrowserRouter>
     <Provider store={reduxStore}>
-      <ReduxComponent />
+      <CounterClick />
+      <CounterHover />
     </Provider>
   </BrowserRouter>,
   document.getElementById("root")

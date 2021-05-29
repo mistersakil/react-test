@@ -6,7 +6,7 @@ import {
   reset,
 } from "../../redux/actions/counterActions";
 
-const ReduxComponent = ({ count, increment, decrement, reset, error }) => {
+const CounterClick = ({ count, increment, decrement, reset, error }) => {
   useEffect(() => {
     if (count === 0) {
       document.title = `Count`;
@@ -34,5 +34,5 @@ const mapStateToProps = (state) => {
   };
 };
 export default connect(mapStateToProps, { increment, decrement, reset })(
-  ReduxComponent
+  CounterClick
 );
