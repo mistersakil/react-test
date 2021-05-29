@@ -16,13 +16,16 @@ import "./index.css";
 // import Reducer from "./Components/Reducer";
 // import QuizApp from "./Components/QuizApp";
 // import QuizIndex from "./Components/Quiz/QuizIndex";
-import CounterClick from "./Components/Hoc/CounterClick";
-import CounterHover from "./Components/Hoc/CounterHover";
-
+// import CounterClick from "./Components/Hoc/CounterClick";
+// import CounterHover from "./Components/Hoc/CounterHover";
+import ReduxComponent from "./Components/redux/ReduxComponent";
+import { Provider } from "react-redux";
+import reduxStore from "./redux/reduxStore";
 ReactDOM.render(
   <BrowserRouter>
-    <CounterClick type="Click" />
-    <CounterHover type="MouseHover " />
+    <Provider store={reduxStore}>
+      <ReduxComponent />
+    </Provider>
   </BrowserRouter>,
   document.getElementById("root")
 );
