@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import "./index.css";
-// import Counter from './Counter';
+// import "./index.css";
+// import Counter from "./Counter";
 // import Timer from  './Timer'
 // import DigitalCalculator from  './DigitalCalculator'
 // import Form from  './Form'
@@ -18,15 +18,17 @@ import "./index.css";
 // import QuizIndex from "./Components/Quiz/QuizIndex";
 // import CounterClick from "./Components/Hoc/CounterClick";
 // import CounterHover from "./Components/Hoc/CounterHover";
-import CounterClick from "./Components/redux/CounterClick";
-import CounterHover from "./Components/redux/CounterHover";
+// import CounterClick from "./Components/redux/CounterClick";
+// import CounterHover from "./Components/redux/CounterHover";
+// import { Provider } from "react-redux";
+// import reduxStore from "./redux/reduxStore";
+import store from "./services/store";
 import { Provider } from "react-redux";
-import reduxStore from "./redux/reduxStore";
+import ReduxCounter from "./ReduxCounter";
 ReactDOM.render(
   <BrowserRouter>
-    <Provider store={reduxStore}>
-      <CounterClick />
-      <CounterHover />
+    <Provider store={store}>
+      <ReduxCounter />
     </Provider>
   </BrowserRouter>,
   document.getElementById("root")
