@@ -5,8 +5,12 @@ import {
 } from "../types";
 
 export const get_users_request = (payload = false) => {
-  let action = { type: GET_USERS_REQUEST, payload };
-  return (dispatch) => {
-    dispatch(action);
+  return async (dispatch) => {
+    dispatch({ type: GET_USERS_REQUEST, payload });
+    let getUsers = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    getUsers.status === 404
+      ? dispatch({ type: GET_USERS_FAILED, payload: true })
+      : dispatch({ type: GET_USERS_SUCCESS, payload: await getUsers.json() });
   };
 };

@@ -7,7 +7,7 @@ import {
 const initialState = {
   users: null,
   loading: true,
-  error: null,
+  error: false,
 };
 
 const userReducers = (state = initialState, action) => {
@@ -17,10 +17,11 @@ const userReducers = (state = initialState, action) => {
       return { ...state };
     }
     case GET_USERS_SUCCESS: {
-      return { ...state, loading: false };
+      console.log(payload);
+      return { ...state, loading: false, users: payload };
     }
     case GET_USERS_FAILED: {
-      return { ...state, loading: false, error: payload };
+      return { ...state, loading: false, error: payload, users: null };
     }
     default: {
       return state;
