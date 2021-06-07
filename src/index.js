@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+// import { BrowserRouter } from "react-router-dom";
 // import "./index.css";
 // import Counter from "./Counter";
 // import Timer from  './Timer'
@@ -22,14 +22,15 @@ import { BrowserRouter } from "react-router-dom";
 // import CounterHover from "./Components/redux/CounterHover";
 // import { Provider } from "react-redux";
 // import reduxStore from "./redux/reduxStore";
-import store from "./services/store";
+// import store from "./services/store";
+// import { Provider } from "react-redux";
+// import ReduxCounter from "./ReduxCounter";
+import UserApiComponent from "./UserApiComponent";
+import store from "./servicesUserApi/store";
 import { Provider } from "react-redux";
-import ReduxCounter from "./ReduxCounter";
 ReactDOM.render(
-  <BrowserRouter>
-    <Provider store={store}>
-      <ReduxCounter />
-    </Provider>
-  </BrowserRouter>,
+  <Provider store={store}>
+    <UserApiComponent />
+  </Provider>,
   document.getElementById("root")
 );
