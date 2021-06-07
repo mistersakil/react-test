@@ -8,7 +8,7 @@ import UserTableComp from "./userTableComp";
 
 const UserApiComponent = () => {
   const dispatch = useDispatch();
-  const { users, loading, error } = useSelector((state) => state.userReducers);
+  const { loading, error } = useSelector((state) => state.userReducers);
   useEffect(() => {
     document.title = "Users Api Call";
     dispatch(get_users_request());

@@ -1,35 +1,24 @@
 import React from "react";
-
+import UserTableRowComp from "./userTableRowComp";
 const userTableComp = () => {
+  let userFieldsToDisplay = ["id", "name", "email", "website", "phone"];
   return (
     <>
       <table className="table table-hover">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            {userFieldsToDisplay.map((field, index) => {
+              return field === "id" ? null : (
+                <th scope="col" key={index}>
+                  {field}
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
+          <UserTableRowComp userFieldsToDisplay={userFieldsToDisplay} />
         </tbody>
       </table>
     </>
