@@ -17,7 +17,6 @@ const userReducers = (state = initialState, action) => {
       return { ...state };
     }
     case GET_USERS_SUCCESS: {
-      console.log(payload);
       return { ...state, loading: false, users: payload };
     }
     case GET_USERS_FAILED: {
